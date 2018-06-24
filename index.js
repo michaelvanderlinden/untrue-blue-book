@@ -1,5 +1,19 @@
 
 
+var bush = { "AFAM": 
+				{"name": 
+					{"\n": 
+						{"Significance": 3, "The": 3}
+					}, 
+				"desc" : 
+					{"\n": 
+						{"Dub": 1, "Race,": 1, "Caribbean": 2},
+					"The": 
+						{"Dub": 1, "Race,": 1, "Caribbean": 2}
+					}
+				}
+			}
+
 var connectors = ['in', 'and', 'of', 'with', 'for'];
 
 // Returns a random integer between min (inclusive) and max (inclusive) 
@@ -19,25 +33,40 @@ function weightedSelect(items, weights) {
 }
 
 function generate(dept, cat, target_len=1000) {
-	var words = [], word = '\n', i = 1;
-	while (i < target_len || word != '\n') {
-		i += 1;
-		if (!(tree.dept.cat.hasOwnProperty(word)))
-			return;
-		var nextword = weightedSelect(tree.dept.cat.word.keys(), tree.dept.cat.word.values());
+	console.log(target_len);
+	var words = [], word = '\n', i = 0;
+	while (i < target_len || word != '\n' || word.substr(-1) == ':') {
+		if (!(tree[dept][cat].hasOwnProperty(word)))
+			// console.log('test');
+			break;
+		var nextword = weightedSelect(
+			Object.keys(tree[dept][cat][word]),
+			Object.values(tree[dept][cat][word]));
 		if (nextword == '\n') {
-			if (cat == 'name' && word.substr(-1) != ':' && i < target_len)
-				words.push(connectors[randomInt(0, 6)]);
+			console.log(word);
+			console.log(i);
+			if (cat == 'name' && word.substr(-1) != ':' && i < target_len) {
+				console.log("Adding connector");
+				words.push(connectors[randomInt(0, 4)]);
+			}
 		} else {
 			words.push(nextword);
+			i++;
 		}
 		word = nextword;
+		// console.log(word);
 	}
+	// console.log("got here 2");
+	// console.log(words.length);
+	// for (var i = 0; i < words.length; i++)
+	// 	console.log(words[i]);
 	return words;
 }
 
 function generate_name() {
-	var words = generate(dept='AFAM', cat='name', target_len=randomInt(6, 14));
+	var words = generate(dept='AFAM', cat='name', target_len=randomInt(3, 11));
+	// for (var i = 0; i < words.length; i++)
+	// 	console.log(words[i]);
 	return words.join(' ');
 }
 
@@ -50,5 +79,6 @@ function update_all() {
 	document.getElementById('name').innerHTML = generate_name();
 	document.getElementById('desc').innerHTML = generate_desc();
 }
+
 
 document.getElementById('gen_name_desc').onclick = update_all();
