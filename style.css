@@ -1,0 +1,22 @@
+body {
+  text-align: left;
+  color: #00356b;
+  margin-top: 50px;
+}
+
+h2 {
+  margin-bottom: 1em;
+}
+
+#name {
+  font-size: 150%;
+  font-weight: bold;
+}
+
+#desc {
+  font-size: 100%;
+}
+
+footer {
+  margin-top: 40px;
+}
