@@ -1,22 +1,74 @@
-body {
-  text-align: left;
-  color: #00356b;
-  margin-top: 50px;
+@font-face {
+	font-family: yaleNew;
+	src: url(YaleNew-Roman.otf);
 }
 
-h2 {
-  margin-bottom: 1em;
+@font-face {
+	font-family: yaleNew;
+	src: url(YaleNew-Bold.otf);
+	font-weight: bold;
+}
+
+body {
+	text-align: left;
+	padding: 0;
+	margin: 0;
+}
+
+.topbar {
+	overflow: hidden;
+	background-color: #00356b; /* Yale Blue */
+	top: 0px; /* Position the navbar at the top of the page */
+	width: 100%; /* Full width */
+
+}
+
+.topbar bartitle {
+	float: left;
+	display: block;
+	color: white; /* #f2f2f2; is light gray */
+	font-family: yaleNew;
+	font-size: 24px;
+	text-align: left;
+	padding: 18px 100px;
+	text-decoration: none;
+}
+
+.main {
+    margin-top: 30px;  /*Add a top margin to avoid content overlay */
+    padding: 5px;
+	margin: 5px;
 }
 
 #name {
-  font-size: 150%;
-  font-weight: bold;
+	color: #00356b; /* Yale Blue */
+	font-size: 120%;
+	font-family: yaleNew;
+	font-weight: bold;
 }
 
 #desc {
-  font-size: 100%;
+	font-size: 100%;
+	font-family: yaleNew
 }
 
-footer {
-  margin-top: 40px;
+.btn {
+	background-color: #286dc0; /* Yale Light Blue */
+	border: none;
+	border-radius: 3px;
+	color: white;
+	padding: 13px 30px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	-webkit-transition-duration: 0.4s; /* Safari */
+	transition-duration: 0.4s;
+	cursor: pointer;
+	font-family: yaleNew;
+}
+
+.btn:hover {
+	background-color: #00356b; /* Yale Blue */
+	border: none;
 }

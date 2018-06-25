@@ -49,14 +49,14 @@ function generate(dept, cat, target_len=1000) {
 }
 
 function generate_name() {
-	var words = generate(dept='ENGL', cat='name', target_len=randomInt(3, 11));
+	var words = generate(dept='LING', cat='name', target_len=randomInt(3, 11));
 	// for (var i = 0; i < words.length; i++)
 	// 	console.log(words[i]);
 	return words.join(' ');
 }
 
 function generate_desc() {
-	var words = generate(dept='ENGL', cat='desc', target_len=randomInt(45, 100));
+	var words = generate(dept='LING', cat='desc', target_len=randomInt(45, 100));
 	return words.join(' ');
 }
 

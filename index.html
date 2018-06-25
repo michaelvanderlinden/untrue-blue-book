@@ -6,18 +6,123 @@
     <link href="style.css" rel="stylesheet">
   </head>
   <body>
-    <header>
-      <h2>Untrue Blue Book</h2>
-    </header>
-    <div class="container">
-      <div class="row main">
-        <div class="col-md-12">
-          <p id="name"></p>
-          <p id="desc"></p>
-          <div><button class="btn btn-primary" id="gen_name_desc">Generate</button></div>
-          <br>
-          <footer>Created by Mikey Van der Linden</a></footer>
-        </div>
+    <div class="topbar">
+      <bartitle>Untrue Blue Book</bartitle>
+    </div>
+    <div class="main">
+      <div class="col-md-12">
+        <p id="name"></p>
+        <p id="desc"></p>
+        <select size="11">
+          <option value="RANDOM">RANDOM</option>
+          <option value="ACCT">Accounting</option>
+          <option value="USAF">Aerospace Studies</option>
+          <option value="AFAM">African American Studies</option>
+          <option value="AFST">African Studies</option>
+          <option value="AMST">American Studies</option>
+          <option value="ANTH">Anthropology</option>
+          <option value="AMTH">Applied Mathematics</option>
+          <option value="APHY">Applied Physics</option>
+          <option value="ARBC">Arabic</option>
+          <option value="ARCG">Archaeological Studies</option>
+          <option value="ARCH">Architecture</option>
+          <option value="ART">Art</option>
+          <option value="ASTR">Astronomy</option>
+          <option value="BIOL">Biology</option>
+          <option value="BENG">Biomedical Engineering</option>
+          <option value="BRST">British Studies</option>
+          <option value="CENG">Chemical Engineering</option>
+          <option value="CHEM">Chemistry</option>
+          <option value="CHLD">Child Study</option>
+          <option value="CHNS">Chinese</option>
+          <option value="CLCV">Classical Civilization</option>
+          <option value="CLSS">Classics</option>
+          <option value="CGSC">Cognitive Science</option>
+          <option value="CPSC">Computer Science</option>
+          <option value="CPAR">Computing and the Arts</option>
+          <option value="CZEC">Czech</option>
+          <option value="DRST">Directed Studies</option>
+          <option value="DUTC">Dutch</option>
+          <option value="EALL">East Asian Lang and Lit</option>
+          <option value="EAST">East Asian Studies</option>
+          <option value="E&amp;EB">Ecology &amp; Evolutionary Biology</option>
+          <option value="ECON">Economics</option>
+          <option value="EDST">Education Studies</option>
+          <option value="EGYP">Egyptian, Hieroglyphic</option>
+          <option value="EENG">Electrical Engineering</option>
+          <option value="ENAS">Engineering &amp; Applied Science</option>
+          <option value="ENGL">English</option>
+          <option value="ENVE">Environmental Engineering</option>
+          <option value="EVST">Environmental Studies</option>
+          <option value="EP&amp;E">Ethics, Politics, &amp; Economics</option>
+          <option value="ER&amp;M">Ethnicity, Race, &amp; Migration</option>
+          <option value="FILM">Film &amp; Media Studies</option>
+          <option value="F&amp;ES">Forestry &amp; Environment Studies</option>
+          <option value="FREN">French</option>
+          <option value="G&amp;G">Geology and Geophysics</option>
+          <option value="GMAN">German</option>
+          <option value="GLBL">Global Affairs</option>
+          <option value="HLTH">Global Health Studies</option>
+          <option value="GREK">Greek, Ancient</option>
+          <option value="MGRK">Greek, Modern</option>
+          <option value="HEBR">Hebrew</option>
+          <option value="HNDI">Hindi</option>
+          <option value="HIST">History</option>
+          <option value="HSAR">History of Art</option>
+          <option value="HSHM">Hist of Science, Medicine, and Public Health</option>
+          <option value="HMRT">Human Rights</option>
+          <option value="HUMS">Humanities</option>
+          <option value="INDN">Indonesian</option>
+          <option value="ITAL">Italian</option>
+          <option value="JAPN">Japanese</option>
+          <option value="JDST">Judaic Studies</option>
+          <option value="SWAH">Kiswahili</option>
+          <option value="KREN">Korean</option>
+          <option value="LATN">Latin</option>
+          <option value="LAST">Latin American Studies</option>
+          <option value="LING">Linguistics</option>
+          <option value="LITR">Literature</option>
+          <option value="MATH">Mathematics</option>
+          <option value="MENG">Mechanical Engineering</option>
+          <option value="MMES">Modern Middle East Studies</option>
+          <option value="MB&amp;B">Molecular Biophysics &amp; Biochem</option>
+          <option value="MCDB">Molecular, Cellular &amp; Dev Biol</option>
+          <option value="MUSI">Music Department</option>
+          <option value="NAVY">Naval Science</option>
+          <option value="NELC">Near Eastern Langs &amp; Civs</option>
+          <option value="NSCI">Neuroscience</option>
+          <option value="PERS">Persian</option>
+          <option value="PHIL">Philosophy</option>
+          <option value="PHYS">Physics</option>
+          <option value="PLSH">Polish</option>
+          <option value="PLSC">Political Science</option>
+          <option value="PORT">Portuguese</option>
+          <option value="PSYC">Psychology</option>
+          <option value="RLST">Religious Studies</option>
+          <option value="ROMN">Romanian</option>
+          <option value="RUSS">Russian</option>
+          <option value="RSEE">Russian &amp; East Europe Studies</option>
+          <option value="SKRT">Sanskrit</option>
+          <option value="SCIE">Science</option>
+          <option value="SLAV">Slavic</option>
+          <option value="SOCY">Sociology</option>
+          <option value="SAST">South Asian Studies</option>
+          <option value="SPAN">Spanish</option>
+          <option value="SPEC">Special Divisional Major</option>
+          <option value="S&amp;DS">Statistics and Data Science</option>
+          <option value="STCY">Study of the City</option>
+          <option value="THST">Theater Studies</option>
+          <option value="TKSH">Turkish</option>
+          <option value="UKRN">Ukrainian</option>
+          <option value="VIET">Vietnamese</option>
+          <option value="WGSS">Women'sGender&amp;SexualityStudies</option>
+          <option value="YORU">Yoruba</option>
+          <option value="ZULU">isiZulu</option>
+        </select>
+        <br>
+        <div><button class="btn" id="gen_name_desc">Generate</button></div>
+        <br>
+        <footer>Created by Mikey Van der Linden</a></footer>
       </div>
     </div>
     <script src="tree.js"></script>
