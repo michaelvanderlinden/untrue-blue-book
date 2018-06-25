@@ -51,11 +51,18 @@ function generate(dept, cat, target_len=1000) {
 	return words;
 }
 
+function generate_number() {
+	var a = randomInt(1, 4).toString();
+	var b = randomInt(0, 9).toString();
+	var c = randomInt(0, 9).toString();
+	return a + b + c;
+}
+
 function generate_name(dep) {
 	var words = generate(dept=dep, cat='name', target_len=randomInt(3, 9));
 	// for (var i = 0; i < words.length; i++)
 	// 	console.log(words[i]);
-	return words.join(' ');
+	return dep + ' ' + generate_number() + ', ' + words.join(' ');
 }
 
 function generate_desc(dep) {
@@ -66,8 +73,8 @@ function generate_desc(dep) {
 function update_all() {
 	var e = document.getElementById('depts');
 	var dept = e.options[e.selectedIndex].value;
-	if (dept == 'RANDOM') // ! maybe no quotes?
-		dept = e.options[randomInt(1, 102)];
+	if (dept == 'RANDOM')
+		dept = e.options[randomInt(1, 102)].value;
 	document.getElementById('dept_acr').innerHTML = dept;
 	document.getElementById('name').innerHTML = generate_name(dept);
 	document.getElementById('desc').innerHTML = generate_desc(dept);
