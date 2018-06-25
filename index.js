@@ -1,4 +1,4 @@
-
+// Join title phrases together
 var connectors = ['in', 'and', 'of', 'with', 'for'];
 
 // Returns a random integer between min (inclusive) and max (inclusive) 
@@ -18,9 +18,10 @@ function weightedSelect(items, weights) {
 }
 
 function generate(dept, cat, target_len=1000) {
-	console.log(target_len);
+	// console.log(target_len);
 	var words = [], word = '\n', i = 0;
-	while (i < target_len || word != '\n' || word.substr(-1) == ':') {
+	while (i == 0 || i < target_len || word != '\n' || words.slice(-1)[0].substr(-1) == ':') {
+		// console.log(word + '(' + i + '/' + target_len + ')');
 		if (!(tree[dept][cat].hasOwnProperty(word)))
 			// console.log('test');
 			break;
@@ -28,10 +29,10 @@ function generate(dept, cat, target_len=1000) {
 			Object.keys(tree[dept][cat][word]),
 			Object.values(tree[dept][cat][word]));
 		if (nextword == '\n') {
-			console.log(word);
-			console.log(i);
+			// console.log(word);
+			// console.log(i);
 			if (cat == 'name' && word.substr(-1) != ':' && i < target_len) {
-				console.log("Adding connector");
+				// console.log("Adding connector");
 				words.push(connectors[randomInt(0, 4)]);
 			}
 		} else {
@@ -41,6 +42,8 @@ function generate(dept, cat, target_len=1000) {
 		word = nextword;
 		// console.log(word);
 	}
+	// console.log(words);
+	// console.log(word);
 	// console.log("got here 2");
 	// console.log(words.length);
 	// for (var i = 0; i < words.length; i++)
@@ -48,21 +51,26 @@ function generate(dept, cat, target_len=1000) {
 	return words;
 }
 
-function generate_name() {
-	var words = generate(dept='LING', cat='name', target_len=randomInt(3, 11));
+function generate_name(dep) {
+	var words = generate(dept=dep, cat='name', target_len=randomInt(3, 9));
 	// for (var i = 0; i < words.length; i++)
 	// 	console.log(words[i]);
 	return words.join(' ');
 }
 
-function generate_desc() {
-	var words = generate(dept='LING', cat='desc', target_len=randomInt(45, 100));
+function generate_desc(dep) {
+	var words = generate(dept=dep, cat='desc', target_len=randomInt(45, 100));
 	return words.join(' ');
 }
 
 function update_all() {
-	document.getElementById('name').innerHTML = generate_name();
-	document.getElementById('desc').innerHTML = generate_desc();
+	var e = document.getElementById('depts');
+	var dept = e.options[e.selectedIndex].value;
+	if (dept == 'RANDOM') // ! maybe no quotes?
+		dept = e.options[randomInt(1, 102)];
+	document.getElementById('dept_acr').innerHTML = dept;
+	document.getElementById('name').innerHTML = generate_name(dept);
+	document.getElementById('desc').innerHTML = generate_desc(dept);
 }
 
 
