@@ -1,19 +1,19 @@
 @font-face {
 	font-family: yaleNew;
 	/*src: url(https://github.com/michaelvanderlinden/untrue-blue-book/blob/master/YaleNew-Roman.otf);*/
-	src: url(YaleNew-Roman.otf);
+	src: url(fonts/YaleNew-Roman.otf);
 }
 
 @font-face {
 	font-family: yaleNew;
 	/*src: url(https://github.com/michaelvanderlinden/untrue-blue-book/blob/master/YaleNew-Bold.otf);*/
-	src: url(YaleNew-Bold.otf);
+	src: url(fonts/YaleNew-Bold.otf);
 	font-weight: bold;
 }
 
 @font-face {
 	font-family: theSans;
-	src: url(TheSans-Plain.otf);
+	src: url(fonts/TheSans-Plain.otf);
 }
 
 body {
