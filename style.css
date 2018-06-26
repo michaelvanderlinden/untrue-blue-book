@@ -148,6 +148,7 @@ make the two columns stack on top of each other instead of next to each other */
 /* Modal Content/Box */
 .modal-content {
     background-color: #fefefe;
+    /*position: fixed;*/
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
