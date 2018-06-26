@@ -9,9 +9,8 @@ function randomInt(min, max) {
 function weightedSelect(items, weights) {
 	var total = 0;
 	var ranges = weights.slice(0);
-	for(var i = 0, len = weights.length; i < len; i++) {
+	for(var i = 0, len = weights.length; i < len; i++)
 		ranges[i] = [total, total += ranges[i]];
-	}
 	var randomNumber = parseInt(Math.random() * total);
 	for(;randomNumber < ranges[--i][0];);
 	return items[i];
@@ -66,3 +65,29 @@ function update_all() {
 
 update_all();
 document.getElementById('gen_name_desc').onclick = update_all;
+
+// Get the modal
+var modal = document.getElementById('explanation');
+
+// Get the button that opens the modal
+var show_modal_link = document.getElementById("show_modal");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal 
+show_modal_link.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
