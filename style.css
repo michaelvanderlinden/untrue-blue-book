@@ -74,9 +74,6 @@ make the two columns stack on top of each other instead of next to each other */
     .column {
         width: 100%;
     }
-    .footer {
-    	padding-top: 50px;
-    }
 }
 
 /* Clear floats after the columns */
@@ -95,9 +92,11 @@ make the two columns stack on top of each other instead of next to each other */
 	/*position: fixed;*/
 	left: 0;
 	bottom: 0;
-	width: 100%;
+	width: 90%;
 	text-align: center;
-	padding-top: 200px;
+	padding-top: 190px;
+	padding-right: 5%;
+	padding-left: 5%;
 	color: gray;
 	font-family: yaleNew;
 }
