@@ -51,7 +51,7 @@ function generate_name(dep) {
 }
 
 function generate_desc(dep) {
-	var words = generate(dept=dep, cat='desc', target_len=randomInt(45, 100));
+	var words = generate(dept=dep, cat='desc', target_len=randomInt(45, 80));
 	return words.join(' ');
 }
 
@@ -64,5 +64,5 @@ function update_all() {
 	document.getElementById('desc').innerHTML = generate_desc(dept);
 }
 
-
+update_all();
 document.getElementById('gen_name_desc').onclick = update_all;

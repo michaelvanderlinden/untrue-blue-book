@@ -11,6 +11,11 @@
 	font-weight: bold;
 }
 
+@font-face {
+	font-family: theSans;
+	src: url(TheSans-Plain.otf);
+}
+
 body {
 	text-align: left;
 	padding: 0;
@@ -25,21 +30,70 @@ body {
 
 }
 
-.topbar bartitle {
+.topbar header {
 	float: left;
 	display: block;
 	color: white; /* #f2f2f2; is light gray */
 	font-family: yaleNew;
 	font-size: 24px;
 	text-align: left;
-	padding: 18px 100px;
+	padding: 18px 85px;
 	text-decoration: none;
 }
 
 .main {
+	max-width: 750px;
     margin-top: 30px;  /*Add a top margin to avoid content overlay */
-    padding: 5px;
+    padding: 5px 100px;
 	margin: 5px;
+}
+
+.course-display {
+	min-height: 175px;
+	padding-left: 5px;
+}
+
+.column {
+	float: left;
+	width: 48%;
+	padding: 5px;
+}
+
+/* Responsive layout - when the screen is less than n px wide, remove left padding and 
+make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+    .main {
+    	padding: 5px 20px;
+    }
+    .topbar header {
+    	padding: 18px 25px;
+    }
+    .column {
+        width: 100%;
+    }
+}
+
+/* Clear floats after the columns */
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.instr {
+	color:gray;
+	font-family: yaleNew;
+}
+
+.footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	padding-bottom: 10px;
+	color: gray;
+	font-family: yaleNew;
 }
 
 #name {
@@ -51,10 +105,11 @@ body {
 
 #desc {
 	font-size: 100%;
-	font-family: yaleNew
+	font-family: yaleNew;
 }
 
 .btn {
+	position: center;
 	background-color: #286dc0; /* Yale Light Blue */
 	border: none;
 	border-radius: 3px;
@@ -63,7 +118,7 @@ body {
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
-	font-size: 16px;
+	font-size: 120%;
 	-webkit-transition-duration: 0.4s; /* Safari */
 	transition-duration: 0.4s;
 	cursor: pointer;

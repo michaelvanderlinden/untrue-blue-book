@@ -7,14 +7,16 @@
   </head>
   <body>
     <div class="topbar">
-      <bartitle>Untrue Blue Book</bartitle>
+      <header>Untrue Blue Book</header>
     </div>
     <div class="main">
-      <div class="col-md-12">
+      <div class="course-display">
         <p id="name"></p>
         <p id="desc"></p>
+      </div>
+      <div class="column">
         <select id="depts" size="11">
-          <option value="RANDOM">RANDOM</option>
+          <option value="RANDOM" selected>RANDOM</option>
           <option value="ACCT">Accounting</option>
           <option value="USAF">Aerospace Studies</option>
           <option value="AFAM">African American Studies</option>
@@ -119,11 +121,13 @@
           <option value="YORU">Yoruba</option>
           <option value="ZULU">isiZulu</option>
         </select>
-        <br>
-        <div><button class="btn" id="gen_name_desc">Generate</button></div>
-        <br>
-        <footer>Created by Mikey Van der Linden</a></footer>
       </div>
+      <div class="column">
+        <button class="btn" id="gen_name_desc">Generate</button>
+      </div>
+    </div>
+    <div class="footer">
+      This is a work of parody in no way affiliated with Yale University. Created by Michael Van der Linden.
     </div>
     <script src="tree.js"></script>
     <script src="index.js"></script>
