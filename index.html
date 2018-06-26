@@ -11,132 +11,136 @@
       <header>Untrue Blue Book</header>
     </div>
     <div class="main">
-      <div class="course-display">
-        <p id="name"></p>
-        <p id="desc"></p>
+      <div class="row">
+        <div class="course-display">
+          <p id="name"></p>
+          <p id="desc"></p>
+        </div>
       </div>
-      <div class="column">
-        <select id="depts" size="11">
-          <option value="RANDOM" selected>RANDOM</option>
-          <option value="ACCT">Accounting</option>
-          <option value="USAF">Aerospace Studies</option>
-          <option value="AFAM">African American Studies</option>
-          <option value="AFST">African Studies</option>
-          <option value="AMST">American Studies</option>
-          <option value="ANTH">Anthropology</option>
-          <option value="AMTH">Applied Mathematics</option>
-          <option value="APHY">Applied Physics</option>
-          <option value="ARBC">Arabic</option>
-          <option value="ARCG">Archaeological Studies</option>
-          <option value="ARCH">Architecture</option>
-          <option value="ART">Art</option>
-          <option value="ASTR">Astronomy</option>
-          <option value="BIOL">Biology</option>
-          <option value="BENG">Biomedical Engineering</option>
-          <option value="BRST">British Studies</option>
-          <option value="CENG">Chemical Engineering</option>
-          <option value="CHEM">Chemistry</option>
-          <option value="CHLD">Child Study</option>
-          <option value="CHNS">Chinese</option>
-          <option value="CLCV">Classical Civilization</option>
-          <option value="CLSS">Classics</option>
-          <option value="CGSC">Cognitive Science</option>
-          <option value="CPSC">Computer Science</option>
-          <option value="CPAR">Computing and the Arts</option>
-          <option value="CZEC">Czech</option>
-          <option value="DRST">Directed Studies</option>
-          <option value="DUTC">Dutch</option>
-          <option value="EALL">East Asian Lang and Lit</option>
-          <option value="EAST">East Asian Studies</option>
-          <option value="E&amp;EB">Ecology &amp; Evolutionary Biology</option>
-          <option value="ECON">Economics</option>
-          <option value="EDST">Education Studies</option>
-          <option value="EGYP">Egyptian, Hieroglyphic</option>
-          <option value="EENG">Electrical Engineering</option>
-          <option value="ENAS">Engineering &amp; Applied Science</option>
-          <option value="ENGL">English</option>
-          <option value="ENVE">Environmental Engineering</option>
-          <option value="EVST">Environmental Studies</option>
-          <option value="EP&amp;E">Ethics, Politics, &amp; Economics</option>
-          <option value="ER&amp;M">Ethnicity, Race, &amp; Migration</option>
-          <option value="FILM">Film &amp; Media Studies</option>
-          <option value="F&amp;ES">Forestry &amp; Environment Studies</option>
-          <option value="FREN">French</option>
-          <option value="G&amp;G">Geology and Geophysics</option>
-          <option value="GMAN">German</option>
-          <option value="GLBL">Global Affairs</option>
-          <option value="HLTH">Global Health Studies</option>
-          <option value="GREK">Greek, Ancient</option>
-          <option value="MGRK">Greek, Modern</option>
-          <option value="HEBR">Hebrew</option>
-          <option value="HNDI">Hindi</option>
-          <option value="HIST">History</option>
-          <option value="HSAR">History of Art</option>
-          <option value="HSHM">Hist of Science, Medicine, and Public Health</option>
-          <option value="HMRT">Human Rights</option>
-          <option value="HUMS">Humanities</option>
-          <option value="INDN">Indonesian</option>
-          <option value="ITAL">Italian</option>
-          <option value="JAPN">Japanese</option>
-          <option value="JDST">Judaic Studies</option>
-          <option value="SWAH">Kiswahili</option>
-          <option value="KREN">Korean</option>
-          <option value="LATN">Latin</option>
-          <option value="LAST">Latin American Studies</option>
-          <option value="LING">Linguistics</option>
-          <option value="LITR">Literature</option>
-          <option value="MATH">Mathematics</option>
-          <option value="MENG">Mechanical Engineering</option>
-          <option value="MMES">Modern Middle East Studies</option>
-          <option value="MB&amp;B">Molecular Biophysics &amp; Biochem</option>
-          <option value="MCDB">Molecular, Cellular &amp; Dev Biol</option>
-          <option value="MUSI">Music Department</option>
-          <option value="NAVY">Naval Science</option>
-          <option value="NELC">Near Eastern Langs &amp; Civs</option>
-          <option value="NSCI">Neuroscience</option>
-          <option value="PERS">Persian</option>
-          <option value="PHIL">Philosophy</option>
-          <option value="PHYS">Physics</option>
-          <option value="PLSH">Polish</option>
-          <option value="PLSC">Political Science</option>
-          <option value="PORT">Portuguese</option>
-          <option value="PSYC">Psychology</option>
-          <option value="RLST">Religious Studies</option>
-          <option value="ROMN">Romanian</option>
-          <option value="RUSS">Russian</option>
-          <option value="RSEE">Russian &amp; East Europe Studies</option>
-          <option value="SKRT">Sanskrit</option>
-          <option value="SCIE">Science</option>
-          <option value="SLAV">Slavic</option>
-          <option value="SOCY">Sociology</option>
-          <option value="SAST">South Asian Studies</option>
-          <option value="SPAN">Spanish</option>
-          <option value="SPEC">Special Divisional Major</option>
-          <option value="S&amp;DS">Statistics and Data Science</option>
-          <option value="STCY">Study of the City</option>
-          <option value="THST">Theater Studies</option>
-          <option value="TKSH">Turkish</option>
-          <option value="UKRN">Ukrainian</option>
-          <option value="VIET">Vietnamese</option>
-          <option value="WGSS">Women'sGender&amp;SexualityStudies</option>
-          <option value="YORU">Yoruba</option>
-          <option value="ZULU">isiZulu</option>
-        </select>
+      <div class="row">
+        <div class="column">
+          <select id="depts" size="11">
+            <option value="RANDOM" selected>RANDOM</option>
+            <option value="ACCT">Accounting</option>
+            <option value="USAF">Aerospace Studies</option>
+            <option value="AFAM">African American Studies</option>
+            <option value="AFST">African Studies</option>
+            <option value="AMST">American Studies</option>
+            <option value="ANTH">Anthropology</option>
+            <option value="AMTH">Applied Mathematics</option>
+            <option value="APHY">Applied Physics</option>
+            <option value="ARBC">Arabic</option>
+            <option value="ARCG">Archaeological Studies</option>
+            <option value="ARCH">Architecture</option>
+            <option value="ART">Art</option>
+            <option value="ASTR">Astronomy</option>
+            <option value="BIOL">Biology</option>
+            <option value="BENG">Biomedical Engineering</option>
+            <option value="BRST">British Studies</option>
+            <option value="CENG">Chemical Engineering</option>
+            <option value="CHEM">Chemistry</option>
+            <option value="CHLD">Child Study</option>
+            <option value="CHNS">Chinese</option>
+            <option value="CLCV">Classical Civilization</option>
+            <option value="CLSS">Classics</option>
+            <option value="CGSC">Cognitive Science</option>
+            <option value="CPSC">Computer Science</option>
+            <option value="CPAR">Computing and the Arts</option>
+            <option value="CZEC">Czech</option>
+            <option value="DRST">Directed Studies</option>
+            <option value="DUTC">Dutch</option>
+            <option value="EALL">East Asian Lang and Lit</option>
+            <option value="EAST">East Asian Studies</option>
+            <option value="E&amp;EB">Ecology &amp; Evolutionary Biology</option>
+            <option value="ECON">Economics</option>
+            <option value="EDST">Education Studies</option>
+            <option value="EGYP">Egyptian, Hieroglyphic</option>
+            <option value="EENG">Electrical Engineering</option>
+            <option value="ENAS">Engineering &amp; Applied Science</option>
+            <option value="ENGL">English</option>
+            <option value="ENVE">Environmental Engineering</option>
+            <option value="EVST">Environmental Studies</option>
+            <option value="EP&amp;E">Ethics, Politics, &amp; Economics</option>
+            <option value="ER&amp;M">Ethnicity, Race, &amp; Migration</option>
+            <option value="FILM">Film &amp; Media Studies</option>
+            <option value="F&amp;ES">Forestry &amp; Environment Studies</option>
+            <option value="FREN">French</option>
+            <option value="G&amp;G">Geology and Geophysics</option>
+            <option value="GMAN">German</option>
+            <option value="GLBL">Global Affairs</option>
+            <option value="HLTH">Global Health Studies</option>
+            <option value="GREK">Greek, Ancient</option>
+            <option value="MGRK">Greek, Modern</option>
+            <option value="HEBR">Hebrew</option>
+            <option value="HNDI">Hindi</option>
+            <option value="HIST">History</option>
+            <option value="HSAR">History of Art</option>
+            <option value="HSHM">Hist of Science, Medicine, and Public Health</option>
+            <option value="HMRT">Human Rights</option>
+            <option value="HUMS">Humanities</option>
+            <option value="INDN">Indonesian</option>
+            <option value="ITAL">Italian</option>
+            <option value="JAPN">Japanese</option>
+            <option value="JDST">Judaic Studies</option>
+            <option value="SWAH">Kiswahili</option>
+            <option value="KREN">Korean</option>
+            <option value="LATN">Latin</option>
+            <option value="LAST">Latin American Studies</option>
+            <option value="LING">Linguistics</option>
+            <option value="LITR">Literature</option>
+            <option value="MATH">Mathematics</option>
+            <option value="MENG">Mechanical Engineering</option>
+            <option value="MMES">Modern Middle East Studies</option>
+            <option value="MB&amp;B">Molecular Biophysics &amp; Biochem</option>
+            <option value="MCDB">Molecular, Cellular &amp; Dev Biol</option>
+            <option value="MUSI">Music Department</option>
+            <option value="NAVY">Naval Science</option>
+            <option value="NELC">Near Eastern Langs &amp; Civs</option>
+            <option value="NSCI">Neuroscience</option>
+            <option value="PERS">Persian</option>
+            <option value="PHIL">Philosophy</option>
+            <option value="PHYS">Physics</option>
+            <option value="PLSH">Polish</option>
+            <option value="PLSC">Political Science</option>
+            <option value="PORT">Portuguese</option>
+            <option value="PSYC">Psychology</option>
+            <option value="RLST">Religious Studies</option>
+            <option value="ROMN">Romanian</option>
+            <option value="RUSS">Russian</option>
+            <option value="RSEE">Russian &amp; East Europe Studies</option>
+            <option value="SKRT">Sanskrit</option>
+            <option value="SCIE">Science</option>
+            <option value="SLAV">Slavic</option>
+            <option value="SOCY">Sociology</option>
+            <option value="SAST">South Asian Studies</option>
+            <option value="SPAN">Spanish</option>
+            <option value="SPEC">Special Divisional Major</option>
+            <option value="S&amp;DS">Statistics and Data Science</option>
+            <option value="STCY">Study of the City</option>
+            <option value="THST">Theater Studies</option>
+            <option value="TKSH">Turkish</option>
+            <option value="UKRN">Ukrainian</option>
+            <option value="VIET">Vietnamese</option>
+            <option value="WGSS">Women'sGender&amp;SexualityStudies</option>
+            <option value="YORU">Yoruba</option>
+            <option value="ZULU">isiZulu</option>
+          </select>
+        </div>
+        <div class="column">
+          <button class="btn" id="gen_name_desc">Generate</button>
+          <br><br>
+          <a class="show_modal" id="show_modal">More info</a>
+        </div>
       </div>
-      <div class="column">
-        <button class="btn" id="gen_name_desc">Generate</button>
-        <br><br>
-        <a class="show_modal" id="show_modal">More info</a>
-      </div>
+    </div>
+    <div class="footer">
+      <p>This is a work of parody in no way affiliated with Yale University. Created by Michael Van der Linden.</p>
     </div>
     <div id="explanation" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
         <p>This app generates original Yale course names and descriptions using a <a href="https://en.wikipedia.org/wiki/Markov_model" target="_blank">Markov Model</a>.<br><br>To build a Markov Model, the system first has to be trained on a large data set. This app uses the 2017-18 Yale College Programs of Study ("Yale Blue Book") as training data. It reads through the book, and for every word 'A', it keeps a running tally of all the words 'B' that come immediately after 'A', with the corresponding frequency of occurence of each A-B combination. When the app finishes reading the training data, it completes a big table of probabilities for word combinations that it can use to write original phrases. The probability table is further organized by academic department and course names vs. course descriptions, which allows us to specify exactly what type of phrase we want to generate.<br><br>Starting with a random "starting word" (a word that appeared in the Blue Book at the beginning of a sentence or phrase), the app chooses each subsequent word with a weighted random selection from that word's probability table entry. The phrases have a target length, but the app uses it only as a guideline, continuing the phrase until it reaches a "stopping word" (one that appeared in the Blue Book at the end of a sentence or phrase).<br><br>There's a bit of polishing at the end—the app tries to avoid getting tricked by colons, initials, and abbreviations—but for the most part the sentences are simple stochastic word chains. The result is nonsense that still captures the impression of the source material.</p>
       </div>
-    </div>
-    <div class="footer">
-      This is a work of parody in no way affiliated with Yale University. Created by Michael Van der Linden.
     </div>
     <script src="tree.js"></script>
     <script src="index.js"></script>
