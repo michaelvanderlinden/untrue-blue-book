@@ -1,5 +1,7 @@
 ## Untrue Blue Book
 
+Live site here: https://mvdl.io/untrue-blue-book/
+
 This app generates original Yale course names and descriptions using Markov Chains.
 
 To build a Markov model, the system first has to be trained on a large data set. This app uses the 2017-18 Yale College Programs of Study ("Yale Blue Book") as training data. It reads through the book, and for every word 'A', it keeps a running tally of all the words 'B' that come immediately after 'A', with the corresponding frequency of occurence of each A-B combination. When the app finishes reading the training data, it completes a big table of probabilities for word combinations that it can use to write original phrases. The probability table is further organized by academic department and course names vs. course descriptions, which allows us to specify exactly what type of phrase we want to generate.
