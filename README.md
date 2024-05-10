@@ -1,6 +1,6 @@
 ## Untrue Blue Book
 
-Live site here: https://mvdl.io/untrue-blue-book/
+Live site here: https://michaelvanderlinden.github.io/untrue-blue-book/
 
 This app generates original Yale course names and descriptions using Markov Chains.
 
